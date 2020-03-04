@@ -3,18 +3,33 @@ An old work for university class which demonstrates a 15-puzzle game
 
 ![Game-Of-Fifteen](/assets/Game-Of-Fifteen.gif)
 
-### Using
+## Using
 * Windows Form Application (sorry about that :D)
 * MVP Architecture Pattern
 
-### Implementation
+
+## How to solve the 15 puzzle
+This video will help: https://www.youtube.com/watch?v=EtXE08bOVZM
+
+I should warn you when you complete the game this is the only thing you're gonna get:
+
+```c#
+public void PuzzleCompleted()
+{
+        MessageBox.Show("YOU WON");
+}
+```
+so play at your own risk.
+
+
+## Implementation
 For implementation you need to know these three:
 * How to divide an image into n pieces
 * How to shuffle the puzzle
 * Determine if the player won the game or not
 
 
-##### Divide an image into n pieces
+### Divide an image into n pieces
 
 ```c#
 public static Image[] ImageDivider(Image img, int puzzle_width)
@@ -37,7 +52,7 @@ public static Image[] ImageDivider(Image img, int puzzle_width)
 }
 ```
 
-##### Shuffle the puzzle
+### Shuffle the puzzle
 
 ```c#
 public void ShufflePuzzleValues()
@@ -61,7 +76,7 @@ public void ShufflePuzzleValues()
     }
 }
 ```
-##### Check if the player won the game or not
+### Check if the player won or not
   
 ```c#
 public bool isPuzzleComplete()
